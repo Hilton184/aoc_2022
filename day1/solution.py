@@ -1,8 +1,8 @@
 """Solution to day 1."""
 
 
-def get_data() -> list[str]:
-    with open("day1/input.txt") as f:
+def get_data(path: str) -> list[str]:
+    with open(path) as f:
         return f.readlines()
 
 
@@ -32,7 +32,7 @@ def part_2_solution(calories_per_elf: list[int]) -> int:
 
 
 if __name__ == "__main__":
-    data = get_data()
+    data = get_data("day1/input.txt")
 
     calories_per_elf = calories_carried_per_elf(data)
 
